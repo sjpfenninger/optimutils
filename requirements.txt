@@ -1,0 +1,3 @@
+pandas==1
+pyomo==6
+ipython

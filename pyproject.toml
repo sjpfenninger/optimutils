@@ -1,0 +1,38 @@
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["optimutils*"]
+
+[tool.setuptools]
+license-files = ["LICENSE"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "optimutils"
+authors = [
+  { name = "Stefan Pfenninger", email = "stefan@pfenninger.org" },
+]
+maintainers = [
+  { name = "Stefan Pfenninger", email = "stefan@pfenninger.org" },
+]
+description = "Tools for mathematical optimisation."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+classifiers = [
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+]
+dynamic = ["version", "dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+version = { attr = "optimutils.__init__.__version__" }
+
+[project.urls]
+repository = "https://github.com/sjpfenninger/optimutils"
