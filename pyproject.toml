@@ -36,3 +36,4 @@ version = { attr = "optimutils.__init__.__version__" }
 
 [project.urls]
 repository = "https://github.com/sjpfenninger/optimutils"
+changelog = "https://github.com/sjpfenninger/optimutils/CHANGELOG.md"

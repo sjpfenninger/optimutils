@@ -1,5 +1,3 @@
-import itertools
-
 import pandas as pd
 import pyomo.environ as pyo
 from IPython.display import display, HTML
@@ -41,7 +39,7 @@ def get_constraint_info(model, constraint):
     value = constraint()
     try:
         dual = model.dual[constraint]
-    except KeyError:
+    except (KeyError, AttributeError):
         dual = None
     # slack = constraint.slack()
     expr = constraint.expr.to_string()
